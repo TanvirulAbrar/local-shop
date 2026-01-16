@@ -4,14 +4,17 @@ import Link from 'next/link';
 import cookies from 'js-cookie'
 import { FaEye, FaGoogle } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
+import { useState } from 'react';
 
 export default function LoginPage() {
   const router = useRouter();
+  const [error,setError]= useState('');
+
   const handelSubmit = (e) => {
     e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    if(email && password ){
+    const email = e.target.email.value.trim();
+    const password = e.target.password.value.trim();
+    if(email == "admin@example.com" && password == "123Qwe$"){
       cookies.set('auth', true,{expires:30});
       router.push('/products')
     }else {
@@ -147,6 +150,10 @@ export default function LoginPage() {
                   >
                     <FaEye />
                   </button>
+                </div>
+                <div className="flex justify-between items-center ml-1">
+                  <label className="text-xs font-bold text-red-500 dark:text-red-400 uppercase tracking-wider">{error}</label>
+                 
                 </div>
               </div>
               <button 

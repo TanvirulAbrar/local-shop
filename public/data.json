@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "brand": "Crafty Hands",
+    "name": "Handwoven Basket",
+    "price": 35,
+    "category": "Handmade",
+    "tag": "Eco-friendly",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+  },
+  {
+    "id": 2,
+    "brand": "Stitch & Thread",
+    "name": "Organic Cotton Scarf",
+    "price": 28,
+    "category": "Clothing",
+    "tag": "Sustainable",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+  },
+  {
+    "id": 3,
+    "brand": "SoundCore",
+    "name": "Wireless Earbuds",
+    "price": 59,
+    "category": "Electronics",
+    "tag": "Popular",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+  },
+  {
+    "id": 4,
+    "brand": "Tasty Bites",
+    "name": "Organic Honey Jar",
+    "price": 15,
+    "category": "Food & Drink",
+    "tag": "Natural",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 5,
+    "brand": "ClayWorks",
+    "name": "Ceramic Coffee Mug",
+    "price": 22,
+    "category": "Handmade",
+    "tag": "Unique",
+    "availability": "out_of_stock",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+  },
+  {
+    "id": 6,
+    "brand": "Urban Apparel",
+    "name": "Denim Jacket",
+    "price": 75,
+    "category": "Clothing",
+    "tag": "Trendy",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1521334884684-d80222895322"
+  },
+  {
+    "id": 7,
+    "brand": "TechNova",
+    "name": "Smartwatch Series 3",
+    "price": 199,
+    "category": "Electronics",
+    "tag": "New Arrival",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1517414204289-7d38b2c0b9bb"
+  },
+  {
+    "id": 8,
+    "brand": "Sip & Savor",
+    "name": "Gourmet Coffee Beans",
+    "price": 18,
+    "category": "Food & Drink",
+    "tag": "Best Seller",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348"
+  },
+  {
+    "id": 9,
+    "brand": "Woven Wonders",
+    "name": "Handmade Wool Blanket",
+    "price": 120,
+    "category": "Handmade",
+    "tag": "Luxury",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+  },
+  {
+    "id": 10,
+    "brand": "Cozy Cotton",
+    "name": "Crew Neck T-Shirt",
+    "price": 20,
+    "category": "Clothing",
+    "tag": "Casual",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c"
+  },
+  {
+    "id": 11,
+    "brand": "GizmoTech",
+    "name": "Bluetooth Speaker",
+    "price": 49,
+    "category": "Electronics",
+    "tag": "Trending",
+    "availability": "out_of_stock",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+  },
+  {
+    "id": 12,
+    "brand": "Fresh Fields",
+    "name": "Herbal Tea Pack",
+    "price": 12,
+    "category": "Food & Drink",
+    "tag": "Organic",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 13,
+    "brand": "Handcraft Hub",
+    "name": "Leather Journal",
+    "price": 40,
+    "category": "Handmade",
+    "tag": "Classic",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1519974719765-e6559eac2575"
+  },
+  {
+    "id": 14,
+    "brand": "Urban Wear",
+    "name": "Jogger Pants",
+    "price": 45,
+    "category": "Clothing",
+    "tag": "Sporty",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1521334884684-d80222895322"
+  },
+  {
+    "id": 15,
+    "brand": "NextGen",
+    "name": "Portable Charger",
+    "price": 29,
+    "category": "Electronics",
+    "tag": "Convenient",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d"
+  },
+  {
+    "id": 16,
+    "brand": "Sweet Treats",
+    "name": "Artisan Chocolate Box",
+    "price": 30,
+    "category": "Food & Drink",
+    "tag": "Gift",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 17,
+    "brand": "EcoArt",
+    "name": "Recycled Paper Notebook",
+    "price": 25,
+    "category": "Handmade",
+    "tag": "Eco-friendly",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1519974719765-e6559eac2575"
+  },
+  {
+    "id": 18,
+    "brand": "Fashion Forward",
+    "name": "Leather Boots",
+    "price": 110,
+    "category": "Clothing",
+    "tag": "Durable",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1521334884684-d80222895322"
+  },
+  {
+    "id": 19,
+    "brand": "TechLife",
+    "name": "Fitness Tracker",
+    "price": 79,
+    "category": "Electronics",
+    "tag": "Health",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1517414204289-7d38b2c0b9bb"
+  },
+  {
+    "id": 20,
+    "brand": "Farm Fresh",
+    "name": "Organic Olive Oil",
+    "price": 22,
+    "category": "Food & Drink",
+    "tag": "Premium",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 21,
+    "brand": "Handmade Haven",
+    "name": "Macrame Wall Hanging",
+    "price": 55,
+    "category": "Handmade",
+    "tag": "Boho",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+  },
+  {
+    "id": 22,
+    "brand": "Daily Wear",
+    "name": "Linen Shirt",
+    "price": 38,
+    "category": "Clothing",
+    "tag": "Lightweight",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+  },
+  {
+    "id": 23,
+    "brand": "GadgetPro",
+    "name": "Noise Cancelling Headphones",
+    "price": 199,
+    "category": "Electronics",
+    "tag": "Premium",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+  },
+  {
+    "id": 24,
+    "brand": "Green Valley",
+    "name": "Cold Brew Coffee Kit",
+    "price": 35,
+    "category": "Food & Drink",
+    "tag": "Trending",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348"
+  },
+  {
+    "id": 25,
+    "brand": "Artisan Touch",
+    "name": "Handpainted Ceramic Plate",
+    "price": 45,
+    "category": "Handmade",
+    "tag": "Artisanal",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+  },
+  {
+    "id": 26,
+    "brand": "Street Style",
+    "name": "Graphic Hoodie",
+    "price": 40,
+    "category": "Clothing",
+    "tag": "Cool",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1521334884684-d80222895322"
+  },
+  {
+    "id": 27,
+    "brand": "TechGear",
+    "name": "USB-C Hub",
+    "price": 25,
+    "category": "Electronics",
+    "tag": "Essential",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1517414204289-7d38b2c0b9bb"
+  },
+  {
+    "id": 28,
+    "brand": "Fresh Press",
+    "name": "Cold Pressed Juice",
+    "price": 10,
+    "category": "Food & Drink",
+    "tag": "Healthy",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 29,
+    "brand": "Woven Artisans",
+    "name": "Handmade Wool Socks",
+    "price": 30,
+    "category": "Handmade",
+    "tag": "Cozy",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+  },
+  {
+    "id": 30,
+    "brand": "Classic Threads",
+    "name": "Button-Down Shirt",
+    "price": 45,
+    "category": "Clothing",
+    "tag": "Formal",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+  },
+  {
+    "id": 31,
+    "brand": "SmartTech",
+    "name": "HD Webcam",
+    "price": 85,
+    "category": "Electronics",
+    "tag": "High Definition",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+  },
+  {
+    "id": 32,
+    "brand": "Pure Taste",
+    "name": "Organic Spices Set",
+    "price": 25,
+    "category": "Food & Drink",
+    "tag": "Authentic",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348"
+  },
+  {
+    "id": 33,
+    "brand": "Artisan Crafts",
+    "name": "Hand-carved Wooden Spoon",
+    "price": 15,
+    "category": "Handmade",
+    "tag": "Rustic",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085"
+  },
+  {
+    "id": 34,
+    "brand": "Chic Boutique",
+    "name": "Silk Dress",
+    "price": 90,
+    "category": "Clothing",
+    "tag": "Elegant",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1521334884684-d80222895322"
+  },
+  {
+    "id": 35,
+    "brand": "NextTech",
+    "name": "Gaming Mouse",
+    "price": 60,
+    "category": "Electronics",
+    "tag": "Precision",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1517414204289-7d38b2c0b9bb"
+  },
+  {
+    "id": 36,
+    "brand": "Healthy Harvest",
+    "name": "Natural Granola Mix",
+    "price": 14,
+    "category": "Food & Drink",
+    "tag": "Energy",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 37,
+    "brand": "Handmade Treasures",
+    "name": "Beaded Necklace",
+    "price": 27,
+    "category": "Handmade",
+    "tag": "Bohemian",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+  },
+  {
+    "id": 38,
+    "brand": "Comfort Wear",
+    "name": "Cotton Hoodie",
+    "price": 40,
+    "category": "Clothing",
+    "tag": "Comfort",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246"
+  },
+  {
+    "id": 39,
+    "brand": "ElectroHub",
+    "name": "Portable Projector",
+    "price": 250,
+    "category": "Electronics",
+    "tag": "Portable",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+  },
+  {
+    "id": 40,
+    "brand": "Farmers Market",
+    "name": "Fresh Organic Apples",
+    "price": 5,
+    "category": "Food & Drink",
+    "tag": "Fresh",
+    "availability": "in_stock",
+    "image": "https://images.unsplash.com/photo-1511920170033-f8396924c348"
+  }
+]

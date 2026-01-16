@@ -1,11 +1,20 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaSearch, FaShoppingBag } from 'react-icons/fa';
 import { MdGridView } from "react-icons/md";
+import cookies from 'js-cookie';
 
 export default function MarketplaceLayout({ children }) {
+  const [loggedin, setLoggedin] = useState(false);
+  useEffect(() => {
+    if (cookies.get('auth')) {
+      setLoggedin(true);
+    }else{
+      setLoggedin(false);
+    }
+  }, [cookies.get('auth')])
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [
@@ -16,6 +25,7 @@ export default function MarketplaceLayout({ children }) {
     { name: 'Makers', path: '/makers' },
     { name: 'Events', path: '/events-workshops' },
     { name: 'About', path: '/mission-impact' },
+    { name: 'Add product', path: '/seller/add-product' },
   ];
   {
     
@@ -71,7 +81,10 @@ export default function MarketplaceLayout({ children }) {
               />
             </div>
             <button className="btn-gradient px-6 py-2.5 rounded-2xl text-xs font-bold uppercase tracking-widest">
-              <Link href="/auth/login" >Account</Link>
+              {loggedin?<div onClick={()=>{
+                setLoggedin(false);
+                cookies.remove('auth');
+              }} href="/auth/login" >logout</div>:<Link href="/auth/login" >Login</Link>}
             </button>
           </div>
         </div>

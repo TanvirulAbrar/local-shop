@@ -1,6 +1,10 @@
+"use client";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import MarketplaceLayout from "@/components/MarketplaceLayout";
+import { SessionProvider } from "next-auth/react";
+import { ToastContainer } from "react-toastify";
+import SessionListener from "@/components/SessionListener";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -8,7 +12,7 @@ const inter = Inter({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-export const metadata = {
+const metadata = {
   title: "Local Marketplace",
   description:
     "A digital destination for slow living and artisanal excellence, connecting you with the finest local makers.",
@@ -18,8 +22,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-       
-        <MarketplaceLayout>{children}</MarketplaceLayout>
+        <SessionProvider>
+          <MarketplaceLayout>
+            {children}
+            <SessionListener />
+            <ToastContainer position="top-right" />
+          </MarketplaceLayout>
+        </SessionProvider>
       </body>
     </html>
   );

@@ -1,19 +1,23 @@
 import { NextResponse } from "next/server";
 
 export function middleware(req) {
-  const auth = req.cookies.get("auth")?.value;
+  const token =
+    req.cookies.get("next-auth.session-token") ||
+    req.cookies.get("__Secure-next-auth.session-token");
+
   const pathname = req.nextUrl.pathname;
 
-  
-  console.log("Middleware hit:", pathname);
-  console.log("Auth cookie:", auth);
+  // Check if user is authenticated
+  const isAuth = Boolean(token);
 
+  // Protect these routes
   if (
-    (pathname.startsWith("/dashboard") ||
-      pathname.startsWith("/seller/add-product")) &&
-    !auth
+    pathname.startsWith("/dashboard") ||
+    pathname.startsWith("/seller/add-product")
   ) {
-    return NextResponse.redirect(new URL("/auth/login", req.url));
+    if (!isAuth) {
+      return NextResponse.redirect(new URL("/auth/login", req.url));
+    }
   }
 
   return NextResponse.next();

@@ -51,8 +51,10 @@ For testing protected routes (`/seller`, `/seller/add-product`):
 ## Implemented Features
 
 - **Modern Glassmorphic UI**: High-end aesthetic using Tailwind CSS 4 with glass effects and backdrop blurs.
-- **Authentication System**: Login and registration flows with persistent sessions
-- **Route Protection**: Custom middleware to secure seller and dashboard routes.
+- **Authentication System**: Secure login and registration powered by **NextAuth.js**, featuring:
+  - **Google OAuth**: One-click social login integration.
+  - **Credentials Provider**: Email/Password login for administrative access.
+- **Route Protection**: Custom middleware to secure seller and dashboard routes based on session tokens.
 - **Responsive Navigation**: Dynamic navbar with active state tracking and auth-aware buttons (Login/Logout).
 - **Bento-Grid Layouts**: Specialized layouts for events and workshops to maximize visual engagement.
 - **Dynamic Product Routing**: Support for individual product pages with dynamic IDs.
@@ -65,7 +67,7 @@ Utilizes advanced Tailwind CSS utilities to create a "frosted glass" look across
 
 ### Middleware Security
 
-A custom `middleware.js` interceptor checks for an `auth` cookie before allowing access to `/seller` or `/dashboard` routes, redirecting unauthenticated users to the login page.
+A custom `middleware.js` interceptor checks for NextAuth session tokens (`next-auth.session-token`) before allowing access to `/seller` or `/dashboard` routes, redirecting unauthenticated users to the login page.
 
 ### Auth-Aware Navigation
 

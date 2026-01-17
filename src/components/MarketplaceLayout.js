@@ -2,33 +2,34 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { FaSearch, FaShoppingBag } from 'react-icons/fa';
+import { FaSearch, FaShoppingBag } from "react-icons/fa";
 import { MdGridView } from "react-icons/md";
-import cookies from 'js-cookie';
+import cookies from "js-cookie";
+import { signOut, useSession } from "next-auth/react";
 
 export default function MarketplaceLayout({ children }) {
+  const { data: session, status } = useSession();
   const [loggedin, setLoggedin] = useState(false);
   useEffect(() => {
-    if (cookies.get('auth')) {
+    if (cookies.get("auth")) {
       setLoggedin(true);
-    }else{
+    } else {
       setLoggedin(false);
     }
-  }, [cookies.get('auth')])
+  }, [cookies.get("auth")]);
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [
-    { name: 'Home', path: '/' },
+    { name: "Home", path: "/" },
     // { name: 'Services', path: '/services' },
     // { name: 'Contact', path: '/contact' },
-    { name: 'Shop', path: '/products' },
-    { name: 'Makers', path: '/makers' },
-    { name: 'Events', path: '/events-workshops' },
-    { name: 'About', path: '/mission-impact' },
-    { name: 'Add product', path: '/seller/add-product' },
+    { name: "Shop", path: "/products" },
+    { name: "Makers", path: "/makers" },
+    { name: "Events", path: "/events-workshops" },
+    { name: "About", path: "/mission-impact" },
+    { name: "Add product", path: "/seller/add-product" },
   ];
   {
-    
   }
   return (
     <div className="flex flex-col min-h-screen">
@@ -36,33 +37,33 @@ export default function MarketplaceLayout({ children }) {
       <header className="sticky top-0 z-50 w-full px-4 pt-4">
         <div className="max-w-7xl mx-auto glass rounded-full px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-12">
-            
-            <Link href={'/'} className="flex items-center gap-2">
+            <Link href={"/"} className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
-              <MdGridView size={24} className="text-white" />
+                <MdGridView size={24} className="text-white" />
               </div>
-              <h2 className="text-xl font-extrabold tracking-tighter">local.</h2>
+              <h2 className="text-xl font-extrabold tracking-tighter">
+                local.
+              </h2>
             </Link>
             <nav className="hidden lg:flex items-center gap-8">
-      {navItems.map((item) => {
-      const isActive =
-      pathname === item.path ||
-      (item.path !== '/' && pathname.startsWith(item.path));
+              {navItems.map((item) => {
+                const isActive =
+                  pathname === item.path ||
+                  (item.path !== "/" && pathname.startsWith(item.path));
 
-    return (
-      <Link
-        key={item.name}
-        href={item.path}
-        className={`text-xs font-bold uppercase tracking-widest transition-colors
-          ${isActive ? 'text-primary' : 'text-slate-500'}
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.path}
+                    className={`text-xs font-bold uppercase tracking-widest transition-colors
+          ${isActive ? "text-primary" : "text-slate-500"}
           hover:text-primary`}
-      >
-        {item.name}
-      </Link>
-    );
-  })}
-</nav>
-
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
+            </nav>
           </div>
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center glass rounded-2xl px-4 py-2">
@@ -81,10 +82,16 @@ export default function MarketplaceLayout({ children }) {
               />
             </div>
             <button className="btn-gradient px-6 py-2.5 rounded-2xl text-xs font-bold uppercase tracking-widest">
-              {loggedin?<div onClick={()=>{
-                setLoggedin(false);
-                cookies.remove('auth');
-              }} href="/auth/login" >logout</div>:<Link href="/auth/login" >Login</Link>}
+              {session ? (
+                <span
+                  onClick={() => signOut({ callbackUrl: "/auth/login" })}
+                  className="cursor-pointer"
+                >
+                  Logout
+                </span>
+              ) : (
+                <Link href="/auth/login">Login</Link>
+              )}
             </button>
           </div>
         </div>
@@ -97,11 +104,13 @@ export default function MarketplaceLayout({ children }) {
       <footer className="bg-white dark:bg-slate-900/50 border-t border-slate-100 dark:border-white/5 mt-32 py-24 px-6 lg:px-20">
         <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-20">
           <div className="md:col-span-4 flex flex-col gap-8">
-            <Link href={'/'} className="flex items-center gap-2">
+            <Link href={"/"} className="flex items-center gap-2">
               <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center">
-              <MdGridView size={24} className="text-white" />
+                <MdGridView size={24} className="text-white" />
               </div>
-              <h2 className="text-xl font-extrabold tracking-tighter">local.</h2>
+              <h2 className="text-xl font-extrabold tracking-tighter">
+                local.
+              </h2>
             </Link>
             <p className="text-slate-400 dark:text-gray-500 text-sm thin-typeface leading-relaxed max-w-xs">
               A digital destination for slow living and artisanal excellence,
